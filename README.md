@@ -133,8 +133,9 @@ Ensures each generated output is:
 
 ### **Setup**
 
-#### 1. Clone the repository
+
 ```sh
+1. Clone the repo
 git clone https://github.com/yourname/zero-draft.git
 cd zero-draft
 
