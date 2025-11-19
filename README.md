@@ -116,3 +116,65 @@ Ensures each generated output is:
 - **MongoDB** – Draft storage  
 - **Gmail API** – Email ingestion  
 - **pdf2image** – PDF-to-image conversion  
+
+
+## **How to Run**
+
+### **Prerequisites**
+- Python 3.9+  
+- Gemini API Key  
+- Groq API Key  
+- Pinecone API Key  
+- Gmail OAuth credentials  
+- MongoDB Atlas/Local instance  
+- `requirements.txt` dependencies  
+
+---
+
+### **Setup**
+
+#### 1. Clone the repository
+```sh
+git clone https://github.com/yourname/zero-draft.git
+cd zero-draft
+
+
+2. Create & Activate Virtual Environment
+python -m venv venv
+source venv/bin/activate        # macOS/Linux
+# Windows:
+# venv\Scripts\activate
+
+3. Install Dependencies
+pip install -r requirements.txt
+
+4. Configure Environment Variables
+
+Create a .env file in the root directory and add:
+
+GEMINI_API_KEY=
+GROQ_API_KEY=
+PINECONE_API_KEY=
+CHROMA_DB_PATH=
+MONGO_URI=
+
+GMAIL_CLIENT_ID=
+GMAIL_CLIENT_SECRET=
+GMAIL_REFRESH_TOKEN=
+MY_EMAIL=your_email@gmail.com
+
+5. Run the Automation Workflow
+python main.py
+
+6. Start FastAPI Backend
+uvicorn backend.main:app --reload
+
+7. Start the Dashboard
+cd dashboard
+npm install
+npm run dev
+
+
+Dashboard will be available at:
+
+http://localhost:5173
